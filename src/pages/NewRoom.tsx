@@ -1,19 +1,17 @@
 import { Link } from "react-router-dom";
 import { Button } from "../components/Button";
+import { useAuth } from "../hooks/useAuth";
 
 import illustrationImage from "../assets/images/illustration.svg";
 import logoImage from "../assets/images/logo.svg";
 
 import "../styles/auth.scss";
-import { useContext } from "react";
-import { AuthContext } from "../App";
 
 export function NewRoom() {
-  const { user } = useContext(AuthContext);
+  const { user } = useAuth();
 
   return(
     <div id="page-auth">
-      <h1>{user?.name}</h1>
       <aside>
         <img src={illustrationImage} alt="Ilustração simbolizando perguntas e respostas" />
         <strong>Crie salas de Q&amp;A ao vivo</strong>
