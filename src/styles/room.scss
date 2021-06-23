@@ -40,7 +40,7 @@
         font-weight: 500;
         font-size: 14px;
 
-        margin-left: 16;
+        margin-left: 16px;
         border-radius: 1000px;
         
         padding: 8px 16px;
@@ -67,8 +67,27 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        
+        .user-info {
+          display: flex;
+          align-items: center;
 
-        span {
+          img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+          }
+
+          span {
+            margin-left: 8px;
+            color: #29292e;
+
+            font-weight: 500;
+            font-size: 14px;
+          }
+        }
+
+        > span {
           color: #737388;
           font-size: 14px;
           font-weight: 500;
