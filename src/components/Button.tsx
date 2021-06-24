@@ -2,11 +2,13 @@ import { ButtonHTMLAttributes } from "react";
 
 import "../styles/button.scss";
 
-type MinhocaProps = ButtonHTMLAttributes<HTMLButtonElement>;
+type MinhocaProps = ButtonHTMLAttributes<HTMLButtonElement> & {
+  isOutlined?: boolean;
+};
 
-function Button(props: MinhocaProps) {
+function Button({isOutlined = false, ...props}: MinhocaProps) {
   return(
-    <button className="button" {...props}/>
+    <button className={`button ${isOutlined ? 'outlined' : ''}`} {...props}/>
   );
 }
 
